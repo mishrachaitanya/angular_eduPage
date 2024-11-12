@@ -1,0 +1,97 @@
+
+
+
+<!-- Main Section with Courses and Trending Courses -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Courses Section (Left Side) -->
+        <div class="col-lg-9">
+            <section id="courses" class="main-section">
+                <h2 class="text-center">Our Courses</h2>
+                <div class="row">
+                    @for(item of courseList(); track $index){
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <img [src]="item.thumbnailUrl" class="card-img-top" alt="Course 2">
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.courseName}}</h5>
+                                <p class="card-text">{{item.courseDescription | slice:0:100}}.</p>
+                                <a class="btn btn-primary" (click)="openModal(item.courseId)">View Videos</a>
+                                <a  class="btn btn-warning text-end">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+            }</div>
+            </section>
+        </div>
+
+        <!-- Trending Courses Section (Right Side) -->
+       
+    </div>
+</div>
+<div class="modal" #courseModal>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Course Videos</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+               <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="https://i9.ytimg.com/vi_webp/b9ne9HIQWnc/mqdefault.webp?v=66e51264&sqp=COSFkrgG&rs=AOn4CLDwoeJLStcFxYsdP5hL7g7WoDw6WQ" class="card-img-top" alt="Trending Course 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Machine Learning with Python</h6>  
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div> 
+        </div>
+    </div>
+</div>
