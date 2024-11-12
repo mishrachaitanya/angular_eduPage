@@ -15,6 +15,6 @@ export class MasterService {
   {
     return this.http.get<IApiResponse>(`${this.apiUrl}GetAllCourse`)
   }
-
   
+
 }
